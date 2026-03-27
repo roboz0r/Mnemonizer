@@ -1,0 +1,45 @@
+<Project>
+  <PropertyGroup>
+    <RepoRoot>$(MSBuildThisFileDirectory)</RepoRoot>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Authors>Robert Lenders</Authors>
+    <Copyright>Copyright (c) Robert Lenders 2026</Copyright>
+    <PackageVersion>0.1.0</PackageVersion>
+    <RepositoryUrl>https://github.com/roboz0r/Mnemonizer</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://roboz0r.github.io/Mnemonizer/</PackageProjectUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <!-- https://fsprojects.github.io/FSharp.Formatting/styling.html -->
+    <FsDocsLicenseLink>https://github.com/roboz0r/Mnemonizer/License</FsDocsLicenseLink>
+    <FsDocsReleaseNotesLink>https://github.com/roboz0r/Mnemonizer/RELEASE_NOTES.md</FsDocsReleaseNotesLink>
+    <FsDocsLogoSource>images/logo.svg</FsDocsLogoSource>
+    <FsDocsLicenseLink>https://github.com/roboz0r/Mnemonizer/blob/master/LICENSE</FsDocsLicenseLink>
+    <FsDocsReleaseNotesLink>https://github.com/roboz0r/Mnemonizer/blob/master/release-notes.md</FsDocsReleaseNotesLink>
+  </PropertyGroup>
+  <PropertyGroup Label="F# Specific Options" Condition="'$(MSBuildProjectExtension)' == '.fsproj'">
+    <DisableImplicitSystemValueTupleReference>true</DisableImplicitSystemValueTupleReference>
+    <DisableImplicitFSharpCoreReference>true</DisableImplicitFSharpCoreReference>
+  </PropertyGroup>
+  <!-- Use lock files -->
+  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <RestoreLockedMode Condition="'$(ContinuousIntegrationBuild)' == 'true'">true</RestoreLockedMode>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="$(RepoRoot)README.md" Pack="true" PackagePath="/" />
+    <None Include="$(RepoRoot)LICENSE" Pack="true" PackagePath="/" />
+  </ItemGroup>
+</Project>

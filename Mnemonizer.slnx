@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Mnemonizer/Mnemonizer.fsproj" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="test/Mnemonizer.Tests/Mnemonizer.Tests.fsproj" />
+    <Project Path="test/Mnemonizer.Benchmarks/Mnemonizer.Benchmarks.fsproj" />
+  </Folder>
+</Solution>

@@ -1,6 +1,6 @@
 <Solution>
   <Folder Name="/src/">
-    <Project Path="src/Mnemonizer/Mnemonizer.fsproj" />
+    <Project Path="src/Mnemonizer/Mnemonizer.csproj" />
   </Folder>
   <Folder Name="/test/">
     <Project Path="test/Mnemonizer.Tests/Mnemonizer.Tests.fsproj" />

@@ -2,6 +2,8 @@
 
 A .NET library that maps opaque system identifiers (GUIDs, database keys, etc.) to memorable, deterministic aliases in the form **adjective-adjective-noun** (e.g. `bright-quick-falcon`).
 
+[![NuGet Version](https://img.shields.io/nuget/v/Mnemonizer)][NugetLink]
+
 Designed for LLM tool-call pipelines where raw IDs waste context tokens and confuse the model.
 
 ## Installation
@@ -89,3 +91,5 @@ Word lookups are case-insensitive.
 ## License
 
 See [LICENSE](LICENSE) for details.
+
+[NugetLink]: https://www.nuget.org/packages/Mnemonizer
